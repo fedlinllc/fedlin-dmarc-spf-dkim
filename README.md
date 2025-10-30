@@ -46,9 +46,7 @@ A customer-tenant-first email authentication service to get domains aligned to D
 
 ## Deployment assets
 
-Deployment assets (per-domain runbooks, DNS API configs, workflow files, redacted customer notes) are kept in the **private** repository:
-
-👉 **`fedlin-dmarc-spf-dkim-deployment`**
+Deployment assets (per-domain runbooks, DNS API configs, workflow files, redacted customer notes) are kept in a **private FEDLIN deployment repository** and are provided only as part of an engagement.
 
 This public repo tracks the service description, not the customer code.
 
