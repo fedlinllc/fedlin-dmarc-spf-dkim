@@ -22,6 +22,7 @@ A customer-tenant-first email authentication service to get domains aligned to D
 - DKIM enablement/rotation guidance
 - Reporting/forensic setup options that stay in **customer** infrastructure
 - GitHub Actions (OIDC-only) delivery patterns for repeatable changes
+- Compliance mappings for SOC 2, ISO 27001, HIPAA, NIST (CSF/800-53), PCI DSS, NERC CIP, FERC, FedRAMP, GDPR, CMMC, and other industry frameworks
 
 > **Public repo policy:** This repository describes the service and delivery pattern. It does **not** contain real customer domains, DNS zones, or TXT records. All examples will use placeholders (e.g. `example.com`, `mail.example.com`).
 
@@ -29,10 +30,10 @@ A customer-tenant-first email authentication service to get domains aligned to D
 
 ## Evidence model (customer-owned)
 
-- DNS changes are applied in **the customer’s DNS / tenant**
+- DNS changes are applied in **the customer's DNS / tenant**
 - Evidence of correct policy is collected from customer-side tooling
 - FEDLIN can supply automation via **GitHub Actions with OIDC only**
-- Keeps MSP / subcontract deliveries clean for auditors and customers
+- Keeps MSP / subcontract deliveries clean for SOC 2, ISO 27001, HIPAA, NIST (CSF/800-53), PCI DSS, NERC CIP, FERC, FedRAMP, GDPR, CMMC, and other industry framework auditors and customers
 
 ---
 
