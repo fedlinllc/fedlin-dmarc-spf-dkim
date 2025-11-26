@@ -4,6 +4,27 @@
 
 A customer-tenant-first email authentication service to get domains aligned to DMARC, SPF, and DKIM without exposing customer DNS, tenant names, or mail routing in the public repo. Designed for healthcare, professional services, and MSPs that need to harden mail but keep records in their own DNS.
 
+## What this service does
+- Identifies your active sending domains
+- Defines SPF aligned to your mail platform (M365 or GWS)
+- Enables/documents DKIM
+- Rolls out DMARC in a safe progression (none → monitor → quarantine → reject)
+- Leaves documentation in **your** environment for MSPs and auditors
+
+## What's in this repo
+- \`SERVICE_SCOPE.md\` — in/out of scope
+- \`RECORD_TEMPLATES.md\` — public-safe DNS examples
+- \`EVIDENCE_MODEL.md\` — what to keep and where
+- \`DELIVERY_MODEL.md\` — engagement flow (incl. CI/OIDC option)
+- \`SECURITY.md\`
+- **Automation scripts** — DNS checking, Cloudflare API management, Google Workspace DKIM setup
+- **Documentation** — Setup guides for Cloudflare API, Google Workspace API, OAuth configuration
+
+## What's **not** in this repo
+- Your actual domains or selectors
+- Real DNS zone exports
+- Ongoing DMARC report triage
+
 ---
 
 ## Who this is for

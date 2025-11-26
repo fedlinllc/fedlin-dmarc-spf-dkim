@@ -1,6 +1,11 @@
 name: dmarc-spf-dkim-dns-check
 on:
   workflow_dispatch:
+    inputs:
+      domain:
+        description: 'Domain to check (e.g., fedlin.com)'
+        required: true
+        default: 'fedlin.com'
 
 permissions:
   id-token: write
@@ -12,6 +17,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Placeholder DNS check
+      
+      - name: Install dig (dnsutils)
+        run: sudo apt-get update && sudo apt-get install -y dnsutils
+      
+      - name: Check DNS records
         run: |
-          echo "This is where we'd query DNS to confirm DMARC/SPF/DKIM."
+          ./check-dns.sh "${{ inputs.domain }}"
